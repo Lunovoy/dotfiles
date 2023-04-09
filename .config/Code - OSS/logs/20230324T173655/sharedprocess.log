@@ -1,0 +1,9 @@
+2023-03-24 17:36:59.907 [info] Starting worker process with pid 20739 (type: fileWatcher, window: 1).
+2023-03-24 17:37:03.884 [info] Getting Manifest... rangav.vscode-thunder-client
+2023-03-24 17:37:04.407 [info] Installing extension: rangav.vscode-thunder-client
+2023-03-24 17:37:32.639 [info] Extension signature verification: rangav.vscode-thunder-client. Verification status: Unverified.
+2023-03-24 17:37:32.855 [info] Extracted extension to /home/hellsing/.vscode-oss/extensions/.53623c5c-a31e-4316-b818-88df37c05e36: rangav.vscode-thunder-client
+2023-03-24 17:37:32.866 [info] Renamed to /home/hellsing/.vscode-oss/extensions/rangav.vscode-thunder-client-2.5.3
+2023-03-24 17:37:32.869 [info] Extracting extension completed. rangav.vscode-thunder-client
+2023-03-24 17:37:32.887 [info] Extension installed successfully: rangav.vscode-thunder-client
+2023-03-24 17:37:32.890 [info] Marked extension as uninstalled rangav.vscode-thunder-client-2.5.1

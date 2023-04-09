@@ -1,0 +1,66 @@
+## Color
+import:
+- ~/.config/alacritty/colors-material.yml
+
+## env vars
+env:
+  TERM: xterm-256color
+
+## window settings
+window:
+  opacity: 0.5
+  padding:
+    x: 10
+    y: 10
+
+# Class (window name)
+class:
+  instance: Alacritty
+  general: Alacritty
+
+# Scrolling
+scrolling:
+  history: 10000
+  multiplier: 3
+
+# Visual
+visual_bell:
+  animation: EaseOutExpo
+  duration: 0.5
+  color: "#e4c9af"
+
+# writing thing (cursor)
+cursor:
+  style: "Block"
+
+# def Shell
+shell:
+  program: /bin/zsh
+
+## Font stuff
+font:
+  normal:
+    family: JetBrainsMono Nerd Font
+    style: Medium
+
+  bold:
+    family: JetBrainsMono Nerd Font
+    style: Bold
+
+  italic:
+    family: JetBrainsMono Nerd Font
+    style: MediumItalic
+
+  bold_italic:
+    family: JetBrainsMono Nerd Font
+    style: BoldItalic
+
+  size: 10
+
+  glyph_offset:
+    x: 0
+    y: 0
+
+# General config
+live_config_reload: true
+draw_bold_text_with_bright_colors: true

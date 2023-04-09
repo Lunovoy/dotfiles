@@ -1,0 +1,1 @@
+awful.key({ "mod1"}, "space", function ()awful.util.spawn("rofi -show drun") end),

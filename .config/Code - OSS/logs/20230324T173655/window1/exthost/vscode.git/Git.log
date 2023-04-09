@@ -1,0 +1,18 @@
+2023-03-24 17:36:59.156 [info] Log level: Info
+2023-03-24 17:36:59.156 [info] Validating found git in: "git"
+2023-03-24 17:36:59.156 [info] Using git "2.40.0" from "git"
+2023-03-24 17:36:59.156 [info] > git rev-parse --show-toplevel [4ms]
+2023-03-24 17:36:59.172 [info] > git rev-parse --git-dir --git-common-dir [9ms]
+2023-03-24 17:36:59.184 [info] Open repository: /home/hellsing/Development/react-dashboard
+2023-03-24 17:36:59.449 [info] > git config --get commit.template [13ms]
+2023-03-24 17:36:59.450 [info] > git rev-parse --show-toplevel [258ms]
+2023-03-24 17:36:59.553 [info] > git rev-parse --show-toplevel [98ms]
+2023-03-24 17:36:59.556 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [9ms]
+2023-03-24 17:36:59.568 [info] > git status -z -uall [4ms]
+2023-03-24 17:36:59.583 [info] > git config --get commit.template [2ms]
+2023-03-24 17:36:59.592 [info] > git for-each-ref --format=%(refname)%00%(upstream:short)%00%(objectname)%00%(upstream:track)%00%(upstream:remotename)%00%(upstream:remoteref) refs/heads/master refs/remotes/master [2ms]
+2023-03-24 17:36:59.602 [info] > git status -z -uall [3ms]
+2023-03-24 17:36:59.729 [info] > git check-ignore -v -z --stdin [8ms]
+2023-03-24 17:37:00.039 [info] > git show --textconv :README.md [7ms]
+2023-03-24 17:37:00.041 [info] > git ls-files --stage -- /home/hellsing/Development/react-dashboard/README.md [2ms]
+2023-03-24 17:37:00.048 [info] > git cat-file -s 419c5808064366b2295b335096b971a326443e19 [2ms]

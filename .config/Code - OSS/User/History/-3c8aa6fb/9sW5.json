@@ -1,0 +1,75 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.startupEditor": "none",
+    "[dart]": {
+        "editor.formatOnSave": true,
+        "editor.formatOnType": true,
+        "editor.rulers": [
+            80
+        ],
+        "editor.selectionHighlight": false,
+        "editor.suggest.snippetsPreventQuickSuggestions": false,
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": false
+    },
+    "go.toolsManagement.autoUpdate": true,
+    "editor.fontFamily": "JetBrainsMono Nerd Font",
+    "workbench.colorTheme": "GitHub Dark Default",
+    "json.maxItemsComputed": 30000,
+    "editor.cursorSmoothCaretAnimation": "on",
+    "window.menuBarVisibility": "toggle",
+    "terminal.external.linuxExec": "alacritty",
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "terminal.integrated.allowChords": false,
+    "terminal.integrated.shellIntegration.enabled": false,
+    "vscode-blur-linux.opacity": 90,
+    "editor.wordWrap": "on",
+    "editor.fontSize": 18,
+    "editor.lineNumbers": "relative",
+    "workbench.colorCustomizations": {
+      "statusBar.noFolderBackground": "#007acc",
+      "statusBar.debuggingBackground": "#007acc",
+      "statusBar.background": "#007acc"
+    },
+
+    //Vim
+    "vim.statusBarColorControl": true,
+
+    "vim.useSystemClipboard": true,
+    "vim.insertModeKeyBindings": [
+        {
+        "before": ["k", "j"],
+        "after": ["<Esc>", "l"]
+        }
+    ],
+    "vim.normalModeKeyBindings": [
+    {
+      "before": ["v", "n"],
+      "after": ["v", "g", "_", "y"]
+    },
+    {
+      "before": ["d", "n"],
+      "after": ["d", "g", "_"]
+    }
+    ],
+    // vim mode viwy viwcmd+d p issue hack
+    "vim.visualModeKeyBindingsNonRecursive": [
+        {
+        "before": ["p"],
+        "commands": ["editor.action.clipboardPasteAction"]
+        }
+    ],
+    "editor.minimap.enabled": false,
+    "vim.statusBarColors.normal": "#226FA4",
+    "vim.statusBarColors.insert": "#697B0B",
+    "vim.statusBarColors.visual": "#A53067",
+    "tabnine.experimentalAutoImports": true,
+    "[python]": {
+      "editor.formatOnType": true
+    },
+    "terminal.explorerKind": "external",
+    "glassit.alpha": 220,
+
+    
+}

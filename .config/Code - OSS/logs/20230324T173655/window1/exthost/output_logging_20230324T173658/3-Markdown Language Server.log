@@ -1,0 +1,8 @@
+[Trace 14:36:59.449] VsCodeClientWorkspace: TextDocument.onDidOpen: file:///home/hellsing/Development/react-dashboard/README.md
+[Trace 14:36:59.450] VsCodeClientWorkspace: TextDocument.onDidChanceContent: file:///home/hellsing/Development/react-dashboard/README.md
+[Trace 14:36:59.452] Server: connection.languages.diagnostics.on: file:///home/hellsing/Development/react-dashboard/README.md
+[Debug 14:36:59.538] LinkProvider: compute - file:///home/hellsing/Development/react-dashboard/README.md
+[Trace 14:36:59.582] Server: connection.languages.diagnostics.on: file:///home/hellsing/Development/react-dashboard/README.md
+[Debug 14:36:59.713] MdFoldingProvider: provideFoldingRanges — file:///home/hellsing/Development/react-dashboard/README.md 1
+[Debug 14:36:59.714] TableOfContentsProvider: create - file:///home/hellsing/Development/react-dashboard/README.md
+[Trace 14:37:02.162] DocumentSymbolProvider: provideDocumentSymbols — file:///home/hellsing/Development/react-dashboard/README.md 1

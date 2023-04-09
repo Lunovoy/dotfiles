@@ -1,0 +1,6 @@
+2023-04-01 13:09:01.865 [info] update#ctor - updates are disabled as there is no update URL
+2023-04-01 13:09:03.722 [info] Starting extension host with pid 33973 (fork() took 13 ms).
+2023-04-01 13:09:20.293 [info] Extension host with pid 33973 exited with code: 0, signal: null.
+2023-04-01 13:09:21.357 [info] Starting extension host with pid 34122 (fork() took 17 ms).
+2023-04-01 14:21:29.067 [info] Waiting for extension host with pid 34122 to exit.
+2023-04-01 14:21:29.090 [info] Extension host with pid 34122 exited with code: 0, signal: null.

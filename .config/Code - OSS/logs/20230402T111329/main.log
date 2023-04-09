@@ -1,0 +1,4 @@
+2023-04-02 11:13:30.086 [info] update#ctor - updates are disabled as there is no update URL
+2023-04-02 11:13:31.442 [info] Starting extension host with pid 5318 (fork() took 10 ms).
+2023-04-02 17:30:22.330 [info] Waiting for extension host with pid 5318 to exit.
+2023-04-02 17:30:22.392 [info] Extension host with pid 5318 exited with code: 0, signal: null.

@@ -1,0 +1,22 @@
+2023-04-09 17:24:37.894 [info] Starting worker process with pid 4051 (type: fileWatcher, window: 1).
+2023-04-09 17:24:41.810 [info] Getting Manifest... pkief.material-icon-theme
+2023-04-09 17:24:41.817 [info] Getting Manifest... rangav.vscode-thunder-client
+2023-04-09 17:24:42.910 [info] Installing extension: rangav.vscode-thunder-client
+2023-04-09 17:24:42.911 [info] Installing extension: pkief.material-icon-theme
+2023-04-09 17:24:44.205 [info] Extension signature verification is not done: pkief.material-icon-theme
+2023-04-09 17:24:44.335 [info] Extension signature verification is not done: rangav.vscode-thunder-client
+2023-04-09 17:24:44.455 [info] Extracted extension to /home/hellsing/.vscode-oss/extensions/.641c03cb-bc18-4edb-af93-b3e42c6ade4a: rangav.vscode-thunder-client
+2023-04-09 17:24:44.458 [info] Renamed to /home/hellsing/.vscode-oss/extensions/rangav.vscode-thunder-client-2.6.0-universal
+2023-04-09 17:24:44.460 [info] Extracting extension completed. rangav.vscode-thunder-client
+2023-04-09 17:24:44.469 [info] Extension installed successfully: rangav.vscode-thunder-client
+2023-04-09 17:24:44.472 [info] Marked extension as uninstalled rangav.vscode-thunder-client-2.5.3
+2023-04-09 17:24:44.764 [info] Extracted extension to /home/hellsing/.vscode-oss/extensions/.9cead506-737f-41d9-bdc6-e378c1cd46e4: pkief.material-icon-theme
+2023-04-09 17:24:44.773 [info] Renamed to /home/hellsing/.vscode-oss/extensions/pkief.material-icon-theme-4.26.0-universal
+2023-04-09 17:24:44.775 [info] Extracting extension completed. pkief.material-icon-theme
+2023-04-09 17:24:44.781 [info] Extension installed successfully: pkief.material-icon-theme
+2023-04-09 17:24:44.784 [info] Marked extension as uninstalled pkief.material-icon-theme-4.25.0
+2023-04-09 17:24:49.377 [info] Worker process with pid 4051 terminated normally (type: fileWatcher, window: 1).
+2023-04-09 17:24:49.398 [info] Starting worker process with pid 4219 (type: fileWatcher, window: 1).
+2023-04-09 17:24:49.874 [warning] SharedProcess: createWorker found an existing worker that will be terminated (window: 1, moduleId: vs/platform/files/node/watcher/watcherMain)
+2023-04-09 17:24:49.874 [info] Worker process with pid 4219 terminated normally (type: fileWatcher, window: 1).
+2023-04-09 17:24:49.877 [info] Starting worker process with pid 4231 (type: fileWatcher, window: 1).
