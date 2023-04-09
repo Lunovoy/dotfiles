@@ -1,0 +1,77 @@
+{
+	"name": "go-doc",
+	"displayName": "Go Doc",
+	"description": "Show documentation of go symbols and packages",
+	"version": "1.0.1",
+	"publisher": "msyrus",
+	"keywords": [
+		"Go",
+		"Doc",
+		"Definition"
+	],
+	"engines": {
+		"vscode": "^1.21.0"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:go"
+	],
+	"main": "./out/extension",
+	"contributes": {
+		"languages": [
+			{
+				"id": "go",
+				"extensions": [
+					".go"
+				],
+				"aliases": [
+					"Go"
+				]
+			}
+		],
+		"commands": [
+			{
+				"command": "go-doc.get.def",
+				"title": "Go Doc: Get Definition"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.21.0",
+		"@types/glob": "^7.1.1",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^13.11.0",
+		"eslint": "^7.5.0",
+		"@typescript-eslint/parser": "^3.7.1",
+		"@typescript-eslint/eslint-plugin": "^3.7.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.0.1",
+		"typescript": "^3.8.3",
+		"vscode-test": "^1.3.0"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/msyrus/vscode-go-doc"
+	},
+	"__metadata": {
+		"id": "1b0f0167-95f9-4949-bdef-6b7e57137f6a",
+		"publisherId": "5092c11a-7503-4b45-8ed2-bd7c060ab3d2",
+		"publisherDisplayName": "Minhaz Ahmed Syrus",
+		"targetPlatform": "undefined",
+		"isApplicationScoped": false,
+		"updated": false,
+		"isPreReleaseVersion": false,
+		"installedTimestamp": 1679093232877,
+		"preRelease": false
+	}
+}
