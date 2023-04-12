@@ -1,6 +1,6 @@
 # Dotfiles
 
-## Setup for Arch
+## Setup Awesome for Arch
 
 1. Install packages / dependencies
 ```
@@ -71,3 +71,32 @@ sudo systemctl enable bluetooth
 
     * if your already logged into awesome, reload it
     * else, Login to AwesomeWM
+
+
+
+## Setup system settings
+
+* Install packages for /tools
+
+```
+sudo pacman -S bluez-utils networkmanager
+```
+
+* Configure touchpad settings
+
+    1. Find your touchpad
+    ```
+    xinput list
+    ```
+    2. Create conf file /etc/X11/xorg.conf.d/30-touchpad.conf
+    ```
+    Section "InputClass"
+        Identifier "SYNA3602:00 093A:0255 Touchpad"
+        Driver "libinut"
+        Option "NaturalScrolling" "true"
+        Option "Tapping" "on"
+    EndSection
+    ```
+
+
+
