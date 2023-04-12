@@ -11,6 +11,10 @@ inotify-tools zsh mpdris2 bluez bluez-utils bluez-plugins acpi acpi_call \
 playerctl redshift cutefish-cursor-themes-git cutefish-icons upower xorg xorg-init tar
 ```
 
+```
+sudo pacman -S ripgrep
+```
+
  2. Make backup of directories that will be changed (optional)
 
  ```
