@@ -102,5 +102,22 @@ sudo pacman -S bluez-utils networkmanager
     EndSection
     ```
 
-
+* Configure keyboard layout /etc/X11/xorg.conf.d/00-keyboard.conf
+    Пример:
+    ```
+    Section "InputClass"
+        Identifier "system-keyboard"
+        MatchIsKeyboard "on"
+        Option "XkbLayout" "us,ru"
+        Option "XkbModel" "pc105"
+        Option "XkbVariant" "dvorak,"
+        Option "XkbOptions" "grp:alt_shift_toggle"
+    EndSection
+    ```
+* Autostart X at login ~/.zshrc
+    ```
+    if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
+    exec startx
+    fi
+    ```
 
