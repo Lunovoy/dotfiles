@@ -235,6 +235,12 @@ awful.screen.connect_for_each_screen(function(s)
 	awesome.connect_signal("signal::battery", function(value, state)
 		battery_progress.value = value
 
+		if value <= 15 then
+			battery_progress.color = beautiful.red_color
+		else
+			battery_progress.color = beautiful.green_color
+		end
+
 		if state == 1 then
 			bat_icon.visible = true
 		else
