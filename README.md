@@ -121,3 +121,7 @@ sudo pacman -S bluez-utils networkmanager
     fi
     ```
 
+* Set qt theme
+    ```
+    sudo nano /etc/environment and add the line QT_QPA_PLATFORMTHEME=qt5ct
+    ```
