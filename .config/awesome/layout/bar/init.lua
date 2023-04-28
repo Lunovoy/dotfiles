@@ -9,6 +9,7 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local helpers = require("helpers")
 local dpi = beautiful.xresources.apply_dpi
+local keyboard_layout = require("layout.keyboard_layout")
 
 -- misc/vars
 -- ~~~~~~~~~
@@ -27,20 +28,10 @@ awful.screen.connect_for_each_screen(function(s)
 	-- systray
 	local systray = wibox.widget.systray()
 
-	-- local my_round_systray = wibox.widget {
-	-- {
-	--     wibox.widget.systray(),
-	--     left   = 10,
-	--     top    = 2,
-	--     bottom = 2,
-	--     right  = 10,
-	--     widget = wibox.container.margin,
-	-- },
-	-- bg         = "#ff0000",
-	-- shape      = gears.shape.rounded_rect,
-	-- shape_clip = true,
-	-- widget     = wibox.container.background,
-	-- }
+	-- keyboard layout
+
+	mykeyboardlayout = awful.widget.keyboardlayout()
+
 
 	--     -- taglist
 	local taglist = require("layout.bar.taglist")(s)
@@ -302,9 +293,14 @@ awful.screen.connect_for_each_screen(function(s)
 					widget = wibox.container.margin,
 				},
 				{
+					mykeyboardlayout,
+					margins = { left = dpi(8), top = dpi(8), bottom = dpi(8) },
+					widget = wibox.container.margin,
+				},
+				{
 					bluetooth,
 
-					margins = { left = dpi(8), top = dpi(8), bottom = dpi(8) },
+					margins = {top = dpi(8), bottom = dpi(8) },
 					widget = wibox.container.margin,
 				},
 				{
