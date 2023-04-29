@@ -9,7 +9,6 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local helpers = require("helpers")
 local dpi = beautiful.xresources.apply_dpi
-local keyboard_layout = require("layout.keyboard_layout")
 
 -- misc/vars
 -- ~~~~~~~~~
@@ -31,7 +30,6 @@ awful.screen.connect_for_each_screen(function(s)
 	-- keyboard layout
 
 	mykeyboardlayout = awful.widget.keyboardlayout()
-
 
 	--     -- taglist
 	local taglist = require("layout.bar.taglist")(s)
@@ -300,7 +298,7 @@ awful.screen.connect_for_each_screen(function(s)
 				{
 					bluetooth,
 
-					margins = {top = dpi(8), bottom = dpi(8) },
+					margins = { top = dpi(8), bottom = dpi(8) },
 					widget = wibox.container.margin,
 				},
 				{
