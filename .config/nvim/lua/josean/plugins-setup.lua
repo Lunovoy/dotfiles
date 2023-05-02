@@ -33,7 +33,9 @@ return packer.startup(function(use)
 
   use("nvim-lua/plenary.nvim") -- lua functions that many plugins use
 
-  use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+ -- use("bluz71/vim-nightfly-guicolors") -- preferred colorscheme
+
+  use { "catppuccin/nvim", as = "catppuccin" }
 
   use("christoomey/vim-tmux-navigator") -- tmux & split window navigation
 
@@ -50,8 +52,8 @@ return packer.startup(function(use)
   use("nvim-tree/nvim-tree.lua")
 
   -- vs-code like icons
-  use("nvim-tree/nvim-web-devicons")
-
+  -- use("nvim-tree/nvim-web-devicons")
+  use ('DaikyXendo/nvim-material-icon')
   -- statusline
   use("nvim-lualine/lualine.nvim")
 
@@ -88,6 +90,9 @@ return packer.startup(function(use)
   use("onsails/lspkind.nvim") -- vs-code like icons for autocompletion
   use("fatih/vim-go")
 
+  -- toggle terminal
+  use("akinsho/toggleterm.nvim")
+
   -- formatting & linting
   use("jose-elias-alvarez/null-ls.nvim") -- configure formatters & linters
   use("jayp0521/mason-null-ls.nvim") -- bridges gap b/w mason & null-ls
@@ -101,6 +106,13 @@ return packer.startup(function(use)
     end,
   })
 
+  use({
+    "olexsmir/gopher.nvim",
+    requires = { -- dependencies
+      "nvim-lua/plenary.nvim",
+      "nvim-treesitter/nvim-treesitter",
+    },
+  })
   -- auto closing
   use("windwp/nvim-autopairs") -- autoclose parens, brackets, quotes, etc...
   use({ "windwp/nvim-ts-autotag", after = "nvim-treesitter" }) -- autoclose tags
