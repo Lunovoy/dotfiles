@@ -1,6 +1,5 @@
 {
     "workbench.iconTheme": "material-icon-theme",
-    "workbench.startupEditor": "none",
     "[dart]": {
         "editor.formatOnSave": true,
         "editor.formatOnType": true,
@@ -18,6 +17,7 @@
     "json.maxItemsComputed": 30000,
     "editor.cursorSmoothCaretAnimation": "on",
     "window.menuBarVisibility": "toggle",
+   
     "terminal.external.linuxExec": "alacritty",
     "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
     "terminal.integrated.allowChords": false,
@@ -27,9 +27,19 @@
     "editor.fontSize": 18,
     "editor.lineNumbers": "relative",
     "workbench.colorCustomizations": {
-      "statusBar.noFolderBackground": "#226FA4",
-      "statusBar.debuggingBackground": "#226FA4",
-      "statusBar.background": "#226FA4"
+      // "statusBar.noFolderBackground": "#697B0B",
+      // "statusBar.debuggingBackground": "#697B0B",
+      "statusBar.background": "#2b6a6e"
+    },
+
+    //Format
+    "prettier.semi": false,
+    "prettier.useTabs": true,
+    "editor.formatOnSave": true,
+    "prettier.singleQuote": true,
+    "prettier.jsxSingleQuote": true,
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": true
     },
 
     //Vim
@@ -67,9 +77,33 @@
     "[python]": {
       "editor.formatOnType": true
     },
-    "terminal.explorerKind": "external",
     "glassit.alpha": 220,
-    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.startupEditor": "none",
+    "workbench.colorTheme": "GitHub Dark",
+    "terminal.explorerKind": "external",
+    "terminal.integrated.profiles.linux": {
+
+      "bash": {
+        "path": "bash",
+        "icon": "terminal-bash"
+      },
+      "zsh": {
+        "path": "zsh"
+      },
+      "fish": {
+        "path": "fish"
+      },
+      "tmux": {
+        "path": "tmux",
+        "icon": "terminal-tmux"
+      },
+      "pwsh": {
+        "path": "pwsh",
+        "icon": "terminal-powershell"
+      }
+    },
+    "terminal.integrated.defaultProfile.linux": "zsh",
+    "git.autofetch": true,
 
     
 }
