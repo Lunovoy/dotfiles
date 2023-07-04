@@ -7,17 +7,14 @@
 
 return {
 
-font                = "Roboto",
-titlebar_position   = "bottom",
-gaps                = 5,
-border_width        = 0,
-round_corners       = 15,
-bar_size            = 54,
+	font = "Roboto",
+	titlebar_position = "bottom",
+	gaps = 7,
+	border_width = 2,
+	round_corners = 0,
+	bar_size = 54,
 color_scheme        = "dark",
-
 }
-
-
 --[[
 
 * Explaination of
@@ -44,4 +41,3 @@ color_scheme        = "dark",
 * whereas, "blue" and "grey" are dark.
 
 ]]
-
