@@ -1,48 +1,96 @@
 {
-    "workbench.iconTheme": "material-icon-theme",
-    "[dart]": {
-        "editor.formatOnSave": true,
-        "editor.formatOnType": true,
-        "editor.rulers": [
-            80
-        ],
-        "editor.selectionHighlight": false,
-        "editor.suggest.snippetsPreventQuickSuggestions": false,
-        "editor.suggestSelection": "first",
-        "editor.tabCompletion": "onlySnippets",
-        "editor.wordBasedSuggestions": false
-    },
-    "go.toolsManagement.autoUpdate": true,
-    "editor.fontFamily": "JetBrainsMono Nerd Font",
-    "json.maxItemsComputed": 30000,
-    "editor.cursorSmoothCaretAnimation": "on",
-    "window.menuBarVisibility": "toggle",
-   
-    "terminal.external.linuxExec": "alacritty",
-    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
-    "terminal.integrated.allowChords": false,
-    "terminal.integrated.shellIntegration.enabled": false,
-    "vscode-blur-linux.opacity": 90,
-    "editor.wordWrap": "on",
-    "editor.fontSize": 18,
-    "editor.lineNumbers": "relative",
-    "workbench.colorCustomizations": {
-      "statusBar.noFolderBackground": "#697B0B",
-      "statusBar.debuggingBackground": "#697B0B",
-      "statusBar.background": "#697B0B"
-    },
+  "workbench.iconTheme": "material-icon-theme",
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[prisma]": {
+    "editor.defaultFormatter": "Prisma.prisma"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[dart]": {
+    "editor.formatOnSave": true,
+    "editor.formatOnType": true,
+    "editor.rulers": [80],
+    "editor.selectionHighlight": false,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "onlySnippets",
+    "editor.wordBasedSuggestions": false
+  },
+  "[python]": {
+    "editor.formatOnType": true
+  },
+  "editor.smoothScrolling": true,
+  "editor.fontFamily": "JetBrainsMono Nerd Font",
+  "editor.cursorSmoothCaretAnimation": "on",
+  "editor.suggest.insertMode": "replace",
+  "extensions.autoUpdate": "onlyEnabledExtensions",
+  
+  "json.maxItemsComputed": 30000,
+  "go.toolsManagement.autoUpdate": true,
+  "window.menuBarVisibility": "toggle",
 
-    //Vim
-    "vim.statusBarColorControl": true,
+  "terminal.external.linuxExec": "alacritty",
+  "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+  "terminal.integrated.allowChords": false,
+  "terminal.integrated.shellIntegration.enabled": false,
+  "vscode-blur-linux.opacity": 90,
+  "editor.wordWrap": "on",
+  "editor.fontSize": 18,
+  "editor.lineNumbers": "relative",
 
-    "vim.useSystemClipboard": true,
-    "vim.insertModeKeyBindings": [
-        {
-        "before": ["k", "j"],
-        "after": ["<Esc>", "l"]
-        }
-    ],
-    "vim.normalModeKeyBindings": [
+  //Format
+  "prettier.semi": false,
+  "prettier.trailingComma": "all",
+  "prettier.tabWidth": 4,
+  "prettier.singleAttributePerLine": true,
+  "typescript.preferences.importModuleSpecifier": "relative",
+  "typescript.updateImportsOnFileMove.enabled": "always",
+  "prettier.useTabs": true,
+  // "editor.formatOnSave": true,
+  // "prettier.singleQuote": false,
+  // "prettier.jsxSingleQuote": false,
+  "editor.formatOnSave": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": true,
+    "source.addMissingImports": true
+  },
+
+  //Vim
+  "vim.statusBarColorControl": false,
+  "vim.foldfix": true,
+  "vim.highlightedyank.color": "rgba(230, 97, 89, 0.7)",
+  "vim.highlightedyank.enable": true,
+  "vim.highlightedyank.textColor": "white",
+  "vim.hlsearch": true,
+  "vim.leader": "<space>",
+  "vim.useSystemClipboard": true,
+  "vim.useCtrlKeys": true,
+  "vim.insertModeKeyBindings": [
+    {
+      "before": ["k", "j"],
+      "after": ["<Esc>", "l"]
+    }
+  ],
+  "vim.normalModeKeyBindings": [
+    // Navigation between tabs
+    {
+      "before": ["<tab>"],
+      "commands": ["workbench.action.nextEditor"]
+    },
+    {
+      "before": ["<S-tab>"],
+      "commands": ["workbench.action.previousEditor"]
+    },
+    //
     {
       "before": ["v", "n"],
       "after": ["v", "g", "_", "y"]
@@ -51,48 +99,114 @@
       "before": ["d", "n"],
       "after": ["d", "g", "_"]
     }
-    ],
-    // vim mode viwy viwcmd+d p issue hack
-    "vim.visualModeKeyBindingsNonRecursive": [
-        {
-        "before": ["p"],
-        "commands": ["editor.action.clipboardPasteAction"]
-        }
-    ],
-    "editor.minimap.enabled": false,
-    "vim.statusBarColors.normal": "#226FA4",
-    "vim.statusBarColors.insert": "#697B0B",
-    "vim.statusBarColors.visual": "#A53067",
-    "tabnine.experimentalAutoImports": true,
-    "[python]": {
-      "editor.formatOnType": true
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": ["<C-n>"],
+      "commands": [":nohl"]
     },
-    "glassit.alpha": 220,
-    "workbench.startupEditor": "none",
-    "workbench.colorTheme": "GitHub Dark Default",
-    "terminal.explorerKind": "external",
-    "terminal.integrated.profiles.linux": {
-
-      "bash": {
-        "path": "bash",
-        "icon": "terminal-bash"
-      },
-      "zsh": {
-        "path": "zsh"
-      },
-      "fish": {
-        "path": "fish"
-      },
-      "tmux": {
-        "path": "tmux",
-        "icon": "terminal-tmux"
-      },
-      "pwsh": {
-        "path": "pwsh",
-        "icon": "terminal-powershell"
-      }
+    {
+      "before": ["<S-k>"],
+      "commands": ["editor.action.showHover"]
     },
-    "terminal.integrated.defaultProfile.linux": "zsh",
+    // Tabs
+    {
+      "before": ["<C-w>"],
+      "commands": [":tabc"]
+    },
+    // Splits
+    {
+      "before": ["leader", "s", "v"],
+      "commands": [":vsplit"]
+    },
+    {
+      "before": ["leader", "s", "h"],
+      "commands": [":split"]
+    },
+    // Navigation between splits
+    {
+      "before": ["leader", "h"],
+      "commands": ["workbench.action.focusLeftGroup"]
+    },
+    {
+      "before": ["leader", "j"],
+      "commands": ["workbench.action.focusBelowGroup"]
+    },
+    {
+      "before": ["leader", "k"],
+      "commands": ["workbench.action.focusAboveGroup"]
+    },
+    {
+      "before": ["leader", "l"],
+      "commands": ["workbench.action.focusRightGroup"]
+    },
+    // File search
+    { "before": ["leader", "f"],
+      "commands": ["workbench.action.quickOpen"]
+    },
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [">"],
+      "after": [">", "g", "v"]
+    },
+    {
+      "before": ["<"],
+      "after": ["<", "g", "v"]
+    },
+  ],
+  // vim mode viwy viwcmd+d p issue hack
+  "vim.visualModeKeyBindingsNonRecursive": [
+    {
+      "before": ["p"],
+      "commands": ["editor.action.clipboardPasteAction"]
+    }
+  ],
 
-    
+  "vim.handleKeys": {
+    "<C-a>": false,
+    "<C-f>": false,
+    // VS Code new marker @ next occurence
+    "<C-c>": false,
+    // Cut
+    "<C-x>": false,
+    // Paste
+    "<C-v>": false,
+    "<C-z>": false,
+    "<C-y>": false
+
+},
+  "editor.minimap.enabled": false,
+  "workbench.startupEditor": "none",
+  "workbench.colorTheme": "GitHub Dark",
+  "terminal.explorerKind": "external",
+  "terminal.integrated.profiles.linux": {
+    "bash": {
+      "path": "bash",
+      "icon": "terminal-bash"
+    },
+    "zsh": {
+      "path": "zsh"
+    },
+    "fish": {
+      "path": "fish"
+    },
+    "tmux": {
+      "path": "tmux",
+      "icon": "terminal-tmux"
+    },
+    "pwsh": {
+      "path": "pwsh",
+      "icon": "terminal-powershell"
+    }
+  },
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "git.autofetch": true,
+  "terminal.integrated.env.linux": {},
+  "zenMode.hideLineNumbers": false,
+
+  /////////////////
+  
+  "workbench.editor.showTabs": true,
+  "window.zoomLevel": 1,
 }
