@@ -3,28 +3,29 @@
 ## Setup Awesome for Arch
 
 1. Install packages / dependencies
+
 ```
 yay -S picom-git awesome-git acpid git mpd ncmpcpp wmctrl \
 firefox lxappearance gucharmap thunar alacritty neovim polkit-gnome \
 xdotool xclip scrot brightnessctl alsa-utils pulseaudio jq acpi rofi \
 inotify-tools zsh mpdris2 bluez bluez-utils bluez-plugins acpi acpi_call \
-playerctl redshift cutefish-cursor-themes-git cutefish-icons upower xorg xorg-init tar
+playerctl redshift cutefish-cursor-themes-git cutefish-icons upower xorg xorg-init tar gpick
 ```
 
 ```
 sudo pacman -S ripgrep
 ```
 
- 2. Make backup of directories that will be changed (optional)
+2.  Make backup of directories that will be changed (optional)
 
- ```
-cd 
+```
+cd
 mkdir .backup_config
 cp -r ~/.config/* .backup_config/
 cp -r ~/.mpd .backup_config/
 cp -r ~/.ncmpcpp .backup_config/
 cp -r ~/.themes .backup_config/
- ```
+```
 
 3. Clone this repo
 
@@ -73,26 +74,27 @@ sudo systemctl enable bluetooth
 
 8. Done
 
-    * if your already logged into awesome, reload it
-    * else, Login to AwesomeWM
-
-
+    - if your already logged into awesome, reload it
+    - else, Login to AwesomeWM
 
 ## Setup system settings
 
-* Install packages for /tools
+-   Install packages for /tools
 
 ```
 sudo pacman -S bluez-utils networkmanager
 ```
 
-* Configure touchpad settings
+-   Configure touchpad settings
 
     1. Find your touchpad
+
     ```
     xinput list
     ```
+
     2. Create conf file /etc/X11/xorg.conf.d/30-touchpad.conf
+
     ```
     Section "InputClass"
         Identifier "SYNA3602:00 093A:0255 Touchpad"
@@ -102,7 +104,7 @@ sudo pacman -S bluez-utils networkmanager
     EndSection
     ```
 
-* Configure keyboard layout /etc/X11/xorg.conf.d/00-keyboard.conf
+-   Configure keyboard layout /etc/X11/xorg.conf.d/00-keyboard.conf
     Пример:
     ```
     Section "InputClass"
@@ -114,14 +116,15 @@ sudo pacman -S bluez-utils networkmanager
         Option "XkbOptions" "grp:alt_shift_toggle"
     EndSection
     ```
-* Autostart X at login ~/.zshrc
+-   Autostart X at login ~/.zshrc
+
     ```
     if [ -z "${DISPLAY}" ] && [ "${XDG_VTNR}" -eq 1 ]; then
     exec startx
     fi
     ```
 
-* Set qt theme
+-   Set qt theme
     ```
     sudo nano /etc/environment and add the line QT_QPA_PLATFORMTHEME=qt5ct
     ```
