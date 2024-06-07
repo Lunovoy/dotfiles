@@ -1,0 +1,59 @@
+import = ["/home/hellsing/.config/alacritty/colors-material.toml"]
+live_config_reload = true
+
+#[class]
+#general = "Alacritty"
+#instance = "Alacritty"
+[mouse]
+hide_when_typing = true
+
+[colors]
+draw_bold_text_with_bright_colors = true
+
+[cursor]
+style = "Block"
+
+[env]
+TERM = "xterm-256color"
+
+[font]
+size = 15
+
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Bold"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "BoldItalic"
+
+[font.glyph_offset]
+x = 0
+y = 0
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "MediumItalic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
+
+[scrolling]
+history = 10000
+multiplier = 3
+
+[shell]
+program = "/bin/zsh"
+
+#[visual_bell]
+#animation = "EaseOutExpo"
+#color = "#e4c9af"
+#duration = 0.5
+
+[window]
+opacity = 1.0
+
+[window.padding]
+x = 10
+y = 10

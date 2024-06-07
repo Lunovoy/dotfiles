@@ -1,7 +1,0 @@
-2023-04-01 13:09:04.506 [info] Starting worker process with pid 34028 (type: fileWatcher, window: 1).
-2023-04-01 13:09:04.849 [info] Deleted from disk github.github-vscode-theme /home/hellsing/.vscode-oss/extensions/github.github-vscode-theme-6.3.3-universal
-2023-04-01 13:09:20.298 [info] Worker process with pid 34028 terminated normally (type: fileWatcher, window: 1).
-2023-04-01 13:09:20.308 [info] Starting worker process with pid 34109 (type: fileWatcher, window: 1).
-2023-04-01 13:09:21.657 [warning] SharedProcess: createWorker found an existing worker that will be terminated (window: 1, moduleId: vs/platform/files/node/watcher/watcherMain)
-2023-04-01 13:09:21.665 [info] Worker process with pid 34109 terminated normally (type: fileWatcher, window: 1).
-2023-04-01 13:09:21.682 [info] Starting worker process with pid 34135 (type: fileWatcher, window: 1).
