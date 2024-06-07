@@ -1,6 +1,6 @@
 # Dotfiles
 
-## Setup Awesome for Arch
+## Setup Arch
 
 1. Install packages / dependencies
 
