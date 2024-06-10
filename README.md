@@ -10,6 +10,12 @@ this one for nvim
 sudo pacman -Sy neovim ripgrep lazygit
 ```
 
+for natural backlight control
+
+```
+yay -S brillo
+```
+
 And more other things for system, i don`t remember all of dependencies
 
 ## Setup system settings
