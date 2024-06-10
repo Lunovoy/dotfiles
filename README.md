@@ -10,6 +10,12 @@ this one for nvim
 sudo pacman -Sy neovim ripgrep lazygit
 ```
 
+for notifications
+
+```
+sudo pacman -S dunst
+```
+
 for natural backlight control
 
 ```
