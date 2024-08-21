@@ -6,6 +6,10 @@ return {
     require("rose-pine").setup({
       variant = "auto", -- auto, main, moon, or dawn
       dark_variant = "moon",
+      extend_background_behind_borders = true,
+      styles = {
+        transparency = false,
+      },
     })
     vim.cmd("colorscheme rose-pine")
   end,

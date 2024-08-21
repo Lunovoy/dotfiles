@@ -155,6 +155,9 @@ return {
       ["tsserver"] = function()
         lspconfig["tsserver"].setup({
           capabilities = capabilities,
+          on_attach = function(client, bufnr)
+            require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+          end,
           settings = {
             typescript = {
               inlayHints = {
