@@ -14,8 +14,8 @@ return {
       highlight = {
         enable = true,
       },
-      -- enable indentation
-      indent = { enable = true },
+      -- enable indentation Experimental!
+      -- indent = { enable = true },
       -- enable autotagging (w/ nvim-ts-autotag plugin)
       -- autotag = {
       --   enable = true,
@@ -23,6 +23,7 @@ return {
       -- ensure these language parsers are installed
       ensure_installed = {
         "go",
+        "gotmpl",
         "gomod",
         "gowork",
         "gosum",
