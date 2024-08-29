@@ -1,0 +1,10 @@
+{
+    "^\UF702"  = "moveWordBackward:";                            /* Ctrl  + LeftArrow */
+    "^\U007F"  = "deleteWordBackward:";                          /* Ctrl  + Backspace */
+
+    "^\UF703"  = "moveWordForward:";                             /* Ctrl  + RightArrow */
+    "^\UF728"  = "deleteWordForward:";                           /* Ctrl  + Delete */
+
+    "^$\UF702" = "moveWordBackwardAndModifySelection:";          /* Shift + Ctrl  + Leftarrow */
+    "^$\UF703" = "moveWordForwardAndModifySelection:";           /* Shift + Ctrl  + Rightarrow */
+}
