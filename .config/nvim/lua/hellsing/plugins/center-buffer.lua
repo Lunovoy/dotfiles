@@ -4,9 +4,10 @@ return {
   config = function()
     require("no-neck-pain").setup({
       buffers = {
-        colors = {
-          background = "tokyonight-moon",
-        },
+        -- colors = {
+        --   background = "tokyonight-moon",
+        --   blend = -0.2,
+        -- },
         right = {
           enabled = false,
         },
