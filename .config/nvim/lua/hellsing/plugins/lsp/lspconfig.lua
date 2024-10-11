@@ -152,8 +152,8 @@ return {
           filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
         })
       end,
-      ["tsserver"] = function()
-        lspconfig["tsserver"].setup({
+      ["ts_ls"] = function()
+        lspconfig["ts_ls"].setup({
           capabilities = capabilities,
           on_attach = function(client, bufnr)
             require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)

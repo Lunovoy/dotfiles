@@ -31,7 +31,7 @@ return {
         "jsonls",
         "yamlls",
         "sqlls",
-        "tsserver",
+        "ts_ls",
         "html",
         "cssls",
         "tailwindcss",
