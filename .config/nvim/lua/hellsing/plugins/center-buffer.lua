@@ -8,9 +8,9 @@ return {
         --   background = "tokyonight-moon",
         --   blend = -0.2,
         -- },
-        right = {
-          enabled = false,
-        },
+        -- right = {
+        --   enabled = false,
+        -- },
         wo = {
           fillchars = "eob: ",
         },

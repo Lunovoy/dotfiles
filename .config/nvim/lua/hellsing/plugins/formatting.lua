@@ -12,6 +12,7 @@ return {
         typescriptreact = { "prettier" },
         svelte = { "prettier" },
         css = { "prettier" },
+        scss = { "prettier" },
         html = { "prettier" },
         json = { "prettier" },
         yaml = { "prettier" },
@@ -19,7 +20,7 @@ return {
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
-        python = { "isort", "black" },
+        python = { "black" },
       },
       format_on_save = {
         lsp_fallback = true,

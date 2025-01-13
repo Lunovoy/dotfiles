@@ -4,6 +4,7 @@ return {
   dependencies = {
     "hrsh7th/cmp-buffer", -- source for text in buffer
     "hrsh7th/cmp-path", -- source for file system paths
+    "hrsh7th/cmp-cmdline",
     {
       "L3MON4D3/LuaSnip",
       -- follow latest release.
@@ -30,6 +31,17 @@ return {
       completion = {
         completeopt = "menu,menuone,preview,noselect",
       },
+
+      -- Enable command-line completion
+      cmp.setup.cmdline(":", {
+        mapping = cmp.mapping.preset.cmdline(),
+        sources = cmp.config.sources({
+          { name = "cmdline" },
+        }, {
+          { name = "path" },
+        }),
+      }),
+
       snippet = { -- configure how nvim-cmp interacts with snippet engine
         expand = function(args)
           luasnip.lsp_expand(args.body)

@@ -60,6 +60,7 @@ return {
           { "filename", path = 1 },
         },
         lualine_x = {
+          { "tabnine" },
           {
             lazy_status.updates,
             cond = lazy_status.has_updates,
