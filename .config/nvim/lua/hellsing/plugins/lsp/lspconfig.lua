@@ -78,133 +78,116 @@ return {
       vim.fn.sign_define(hl, { text = icon, texthl = hl, numhl = "" })
     end
 
-    mason_lspconfig.setup_handlers({
-      -- default handler for installed servers
-      function(server_name)
-        lspconfig[server_name].setup({
-          capabilities = capabilities,
-        })
-      end,
-      ["gopls"] = function()
-        -- configure gopls server
-        lspconfig["gopls"].setup({
-          on_attach = on_attach,
-          capabilities = capabilities,
-          cmd = { "gopls" },
-          filetypes = { "go", "gomod", "gowork", "gotmpl" },
-          root_dir = util.root_pattern("go.work", "go.mod", ".git"),
-          settings = {
-            gopls = {
-              completeUnimported = true,
-              usePlaceholders = true,
-              staticcheck = true,
-              gofumpt = true,
-              analyses = {
-                unusedparams = true,
-              },
-            },
+    -- configure gopls server
+    lspconfig.gopls.setup({
+      on_attach = on_attach,
+      capabilities = capabilities,
+      cmd = { "gopls" },
+      filetypes = { "go", "gomod", "gowork", "gotmpl" },
+      root_dir = util.root_pattern("go.work", "go.mod", ".git"),
+      settings = {
+        gopls = {
+          completeUnimported = true,
+          usePlaceholders = true,
+          staticcheck = true,
+          gofumpt = true,
+          analyses = {
+            unusedparams = true,
           },
-          vim.api.nvim_create_autocmd("BufWritePre", {
-            pattern = "*.go",
-            callback = function()
-              local params = vim.lsp.util.make_range_params()
-              params.context = { only = { "source.organizeImports" } }
-              local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
-              for cid, res in pairs(result or {}) do
-                for _, r in pairs(res.result or {}) do
-                  if r.edit then
-                    local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
-                    vim.lsp.util.apply_workspace_edit(r.edit, enc)
-                  end
-                end
+        },
+      },
+      vim.api.nvim_create_autocmd("BufWritePre", {
+        pattern = "*.go",
+        callback = function()
+          local params = vim.lsp.util.make_range_params()
+          params.context = { only = { "source.organizeImports" } }
+          local result = vim.lsp.buf_request_sync(0, "textDocument/codeAction", params)
+          for cid, res in pairs(result or {}) do
+            for _, r in pairs(res.result or {}) do
+              if r.edit then
+                local enc = (vim.lsp.get_client_by_id(cid) or {}).offset_encoding or "utf-16"
+                vim.lsp.util.apply_workspace_edit(r.edit, enc)
               end
-              vim.lsp.buf.format({ async = false })
-            end,
-          }),
-        })
-      end,
-      ["svelte"] = function()
-        -- configure svelte server
-        lspconfig["svelte"].setup({
-          capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            vim.api.nvim_create_autocmd("BufWritePost", {
-              pattern = { "*.js", "*.ts" },
-              callback = function(ctx)
-                -- Here use ctx.match instead of ctx.file
-                client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
-              end,
-            })
+            end
+          end
+          vim.lsp.buf.format({ async = false })
+        end,
+      }),
+    })
+    -- configure svelte server
+    lspconfig.svelte.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        vim.api.nvim_create_autocmd("BufWritePost", {
+          pattern = { "*.js", "*.ts" },
+          callback = function(ctx)
+            -- Here use ctx.match instead of ctx.file
+            client.notify("$/onDidChangeTsOrJsFile", { uri = ctx.match })
           end,
-        })
-      end,
-      ["graphql"] = function()
-        -- configure graphql language server
-        lspconfig["graphql"].setup({
-          capabilities = capabilities,
-          filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
-        })
-      end,
-      ["emmet_ls"] = function()
-        -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
-          capabilities = capabilities,
-          filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
-        })
-      end,
-      ["ts_ls"] = function()
-        lspconfig["ts_ls"].setup({
-          capabilities = capabilities,
-          on_attach = function(client, bufnr)
-            require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
-          end,
-          settings = {
-            typescript = {
-              inlayHints = {
-                includeInlayEnumMemberValueHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-              },
-            },
-            javascript = {
-              inlayHints = {
-                includeInlayEnumMemberValueHints = true,
-                includeInlayFunctionLikeReturnTypeHints = true,
-                includeInlayFunctionParameterTypeHints = true,
-                includeInlayParameterNameHints = "all",
-                includeInlayParameterNameHintsWhenArgumentMatchesName = true,
-                includeInlayPropertyDeclarationTypeHints = true,
-                includeInlayVariableTypeHints = true,
-                includeInlayVariableTypeHintsWhenTypeMatchesName = true,
-              },
-            },
-          },
-        })
-      end,
-      ["lua_ls"] = function()
-        -- configure lua server (with special settings)
-        lspconfig["lua_ls"].setup({
-          capabilities = capabilities,
-          settings = {
-            Lua = {
-              runtime = { version = "LuaJIT" },
-              telemetry = { enabled = false },
-              -- make the language server recognize "vim" global
-              diagnostics = {
-                globals = { "vim" },
-              },
-              completion = {
-                callSnippet = "Replace",
-              },
-            },
-          },
         })
       end,
     })
+    -- configure graphql language server
+    lspconfig.graphql.setup({
+      capabilities = capabilities,
+      filetypes = { "graphql", "gql", "svelte", "typescriptreact", "javascriptreact" },
+    })
+    -- configure emmet language server
+    lspconfig.emmet_ls.setup({
+      capabilities = capabilities,
+      filetypes = { "html", "typescriptreact", "javascriptreact", "css", "sass", "scss", "less", "svelte" },
+    })
+    lspconfig.ts_ls.setup({
+      capabilities = capabilities,
+      on_attach = function(client, bufnr)
+        require("workspace-diagnostics").populate_workspace_diagnostics(client, bufnr)
+      end,
+      settings = {
+        typescript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all",
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+            includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+          },
+        },
+        javascript = {
+          inlayHints = {
+            includeInlayEnumMemberValueHints = true,
+            includeInlayFunctionLikeReturnTypeHints = true,
+            includeInlayFunctionParameterTypeHints = true,
+            includeInlayParameterNameHints = "all",
+            includeInlayParameterNameHintsWhenArgumentMatchesName = true,
+            includeInlayPropertyDeclarationTypeHints = true,
+            includeInlayVariableTypeHints = true,
+            includeInlayVariableTypeHintsWhenTypeMatchesName = true,
+          },
+        },
+      },
+    })
+    -- configure lua server (with special settings)
+    lspconfig.lua_ls.setup({
+      capabilities = capabilities,
+      settings = {
+        Lua = {
+          runtime = { version = "LuaJIT" },
+          telemetry = { enabled = false },
+          -- make the language server recognize "vim" global
+          diagnostics = {
+            globals = { "vim" },
+          },
+          completion = {
+            callSnippet = "Replace",
+          },
+        },
+      },
+    })
+
+    require("mason").setup()
+    require("mason-lspconfig").setup()
   end,
 }
