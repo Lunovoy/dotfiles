@@ -1,5 +1,5 @@
-import = ["/home/hellsing/.config/alacritty/colors-material.toml"]
-live_config_reload = true
+general.import = ["~/.config/alacritty/colors-material.toml"]
+general.live_config_reload = true
 
 #[class]
 #general = "Alacritty"
@@ -43,7 +43,7 @@ style = "Medium"
 history = 10000
 multiplier = 3
 
-[shell]
+[terminal.shell]
 program = "/bin/zsh"
 
 #[visual_bell]
@@ -59,3 +59,5 @@ option_as_alt = "Both"
 [window.padding]
 x = 10
 y = 10
+
+[terminal]

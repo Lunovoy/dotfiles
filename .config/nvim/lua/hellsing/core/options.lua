@@ -54,5 +54,5 @@ opt.swapfile = false
 
 -- Specific settings for Go files
 vim.cmd([[
-autocmd FileType go setlocal tabstop=4 shiftwidth=4 expandtab autoindent 
+  autocmd FileType go setlocal tabstop=4 shiftwidth=4 expandtab autoindent 
 ]])

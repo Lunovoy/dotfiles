@@ -3,8 +3,11 @@
 # close selected window
 alt - q : yabai -m window --close && yabai -m window --focus last
 
-alt - right : yabai -m space --focus next
-alt - left : yabai -m space --focus prev
+# alt - right : yabai -m space --focus next
+# alt - left : yabai -m space --focus prev
+
+# float and center a single window
+# alt - c : yabai -m window --toggle float; yabai -m window --grid 4:4:1:0:2:4
 
 # misc
 lalt - return : open -n -a alacritty
@@ -32,7 +35,7 @@ alt - l : yabai -m window --focus east
 # shift + alt - x : yabai -m space --mirror x-axis
 
 # toggle window float
-shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
+# shift + alt - space : yabai -m window --toggle float --grid 4:4:1:1:2:2
 
 
 # -- Modifying Window Size --
@@ -62,10 +65,10 @@ shift + alt - h : yabai -m window --swap west
 shift + alt - l : yabai -m window --swap east
 
 # move window and split
-ctrl + alt - j : yabai -m window --warp south
-ctrl + alt - k : yabai -m window --warp north
-ctrl + alt - h : yabai -m window --warp west
-ctrl + alt - l : yabai -m window --warp east
+# ctrl + alt - j : yabai -m window --warp south
+# ctrl + alt - k : yabai -m window --warp north
+# ctrl + alt - h : yabai -m window --warp west
+# ctrl + alt - l : yabai -m window --warp east
 
 # move window to display left and right
 # shift + alt - s : yabai -m window --display west; yabai -m display --focus west;
@@ -83,11 +86,13 @@ shift + alt - 3 : yabai -m window --space 3;
 shift + alt - 4 : yabai -m window --space 4;
 shift + alt - 5 : yabai -m window --space 5;
 shift + alt - 6 : yabai -m window --space 6;
-# shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 7 : yabai -m window --space 7;
+shift + alt - 8 : yabai -m window --space 8;
+shift + alt - 9 : yabai -m window --space 9;
 
 # -- Starting/Stopping/Restarting Yabai --
 
 # stop/start/restart yabai
-ctrl + alt - q : brew services stop yabai
-ctrl + alt - s : brew services start yabai
-ctrl + alt - r : brew services restart yabai
+# ctrl + alt - q : brew services stop yabai
+# ctrl + alt - s : brew services start yabai
+# ctrl + alt - r : brew services restart yabai

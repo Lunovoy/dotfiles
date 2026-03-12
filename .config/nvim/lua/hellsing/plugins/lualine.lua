@@ -52,15 +52,13 @@ return {
     -- configure lualine with modified theme
     lualine.setup({
       options = {
-        -- theme = my_lualine_theme,
-        theme = "gruvbox-material",
+        theme = "auto",
       },
       sections = {
         lualine_c = {
           { "filename", path = 1 },
         },
         lualine_x = {
-          { "tabnine" },
           {
             lazy_status.updates,
             cond = lazy_status.has_updates,

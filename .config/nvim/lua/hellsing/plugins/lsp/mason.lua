@@ -28,9 +28,10 @@ return {
       -- list of servers for mason to install
       ensure_installed = {
         "gopls",
+        "clangd",
+        "rust_analyzer",
         "jsonls",
         "yamlls",
-        "sqlls",
         "ts_ls",
         "html",
         "cssls",
@@ -48,10 +49,13 @@ return {
       ensure_installed = {
         "prettier", -- prettier formatter
         "stylua", -- lua formatter
-        "isort", -- python formatter
         "black", -- python formatter
+        "isort", -- python
         "pylint", -- python linter
         "eslint_d", -- js linter
+        "clang-format",
+        "gofumpt", -- go formatter
+        "codelldb", -- rust debugger
       },
     })
   end,

@@ -20,7 +20,9 @@ return {
         graphql = { "prettier" },
         liquid = { "prettier" },
         lua = { "stylua" },
-        python = { "black" },
+        python = { "isort", "black" },
+        -- go = { "goimports", "gofmt" },
+        c = { "clang-format" },
       },
       format_on_save = {
         lsp_fallback = true,
